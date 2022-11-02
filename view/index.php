@@ -10,6 +10,7 @@
 
 <body>
     <p>File frontend taruh di folder view</p>
+<div> test </div>
 </body>
 
 </html>
