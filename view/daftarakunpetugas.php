@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="assets/css/login.css"> -->
     <title>Registrasi akun</title>
     <link rel="stylesheet" href="form.css">
 </head>
@@ -14,32 +15,32 @@
         <nav class="nav">
             <div>
                 <div class="nav__brand">
-                    <img src="../assets/icons8-menu-24 (1).png" name="" class="nav__toggle" id="nav-toggle"></img>
+                    <img src="assets/icons8-menu-24 (1).png" name="" class="nav__toggle" id="nav-toggle"></img>
                     <a href="#" class="nav__logo"></a>
                 </div>
 
                 <div class="nav__list">
                     <div class="nav__link collapse user">
-                        <img src="../assets/icons8-user-24.png" name="" class="nav__icon"></img>
+                        <img src="assets/icons8-user-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Nama</span>
                     </div>
                     <a href="dashboard.html" class="nav__link ">
-                        <img src="../assets/icons8-home-page-24 (1).png" name="" class="nav__icon"></img>
+                        <img src="assets/icons8-home-page-24 (1).png" name="" class="nav__icon"></img>
                         <span class="nav__name">Dashboard</span>
                     </a>
                     <div class="nav__link collapse">
-                        <img src="../assets/icons8-health-book-24.png" name="" class="nav__icon"></img>
+                        <img src="assets/icons8-health-book-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Pasien</span>
                     </div>
                     <div class="nav__link collapse">
-                        <img src="../assets/icons8-id-card-24.png" name="" class="nav__icon"></img>
+                        <img src="assets/icons8-id-card-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Pendaftaran</span>
                     </div>
                     <div class="nav__link collapse">
-                        <img src="../assets/icons8-treatment-24.png" name="" class="nav__icon"></img>
+                        <img src="assets/icons8-treatment-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Pemeriksaan</span>
 
-                        <img src="../assets/icons8-expand-arrow-24 (1).png" name="" class="collapse__link"></img>
+                        <img src="assets/icons8-expand-arrow-24 (1).png" name="" class="collapse__link"></img>
 
                         <ul class="collapse__menu">
                             <span><a href="#" class="collapse__sublink">Pasien Baru</a></span><br>
@@ -48,11 +49,11 @@
                         </ul>
                     </div>
                     <div class="nav__link collapse">
-                        <img src="../assets/icons8-file-24 (1).png" name="" class="nav__icon"></img>
+                        <img src="assets/icons8-file-24 (1).png" name="" class="nav__icon"></img>
                         <span class="nav__name">Koding</span>
                     </div>
                     <div class="nav__link collapse">
-                        <img src="../assets/icons8-folder-24 (1).png" name="" class="nav__icon"></img>
+                        <img src="assets/icons8-folder-24 (1).png" name="" class="nav__icon"></img>
                         <span class="nav__name">Pelaporan</span>
                     </div>
                     <!-- <a href="#" class="nav__link">
@@ -62,7 +63,7 @@
                 </div>
             </div>
             <a href="login.html" class="nav__link">
-                <img src="../assets/icons8-logout-24.png" name="" class="nav__icon"></img>
+                <img src="assets/icons8-logout-24.png" name="" class="nav__icon"></img>
                 <span class="nav__name">Log Out</span>
             </a>
         </nav>
@@ -80,7 +81,7 @@
                             </marquee>
                         </td>
                         <td>
-                            <img src="../assets/logo.png" alt="logo PYB">
+                            <img src="assets/logo.png" alt="logo PYB">
 
                         </td>
                     </tr>
@@ -141,8 +142,8 @@
                         <td><button type="reset" class="reset"><b>Batal</b></button></td>
                     </tr>
                 </table>
-                
-                
+
+
             </div>
             <!-- <div class="content3">
             </div> -->

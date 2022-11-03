@@ -9,7 +9,7 @@
     <!-- link css -->
     <link rel="stylesheet" href="assets/css/login.css">
 
-   
+
 </head>
 
 <body>
@@ -19,20 +19,20 @@
                 <tr>
                     <td>
                         <img src="assets/img/logo.png" class="brand" alt="">
-                        <img src="assets/img/design.png" class="design"alt="">
+                        <img src="assets/img/design.png" class="design" alt="">
                     </td>
                     <td>
                         <h1>Klinik Yakpermas</h1>
                     </td>
                     <td><button type="" class="nav"><b>Pengaturan</b></button></td>
                     <td><button type="" class="nav"><b>Informasi</b></button></td>
-                    <td><button type="" class="submit"><a href="login.html"><b>Masuk</b></a></button></td>
-                    <td><button type="" class="link"><a href="daftarakunpetugas.html"><b>Daftar</b></a></button></td>
-                    
-                </tr>              
+                    <td><button type="" class="submit"><a href="login.php"><b>Masuk</b></a></button></td>
+                    <td><button type="" class="link"><a href="daftarakunpetugas.php"><b>Daftar</b></a></button></td>
+
+                </tr>
             </table>
         </div>
-        
+
     </div>
     <div class="login-box">
         <form action="" method="POST">
@@ -41,14 +41,14 @@
             <div class="row">
                 <div class="col-6">
                     <div class="mb-3">
-                        <input type="text" class="form-control" name="" placeholder="Username" >
+                        <input type="text" class="form-control" name="" placeholder="Username">
                     </div>
                     <div class="mb-3">
                         <input type="password" class="form-control" name="" placeholder="Password">
                     </div>
                     <div class="mb-3">
                         <label for="" class="form-label">Lupa kata sandi ?</label> <br>
-                       <a class="button" href="dashboard.html"><b>Masuk</b></a>
+                        <a class="button" href="dashboard.php"><b>Masuk</b></a>
                         <p>Belum memiliki akun <a href="daftarakunpetugas.html">daftar disini</a></p>
                     </div>
 
@@ -56,7 +56,7 @@
             </div>
         </form>
     </div>
-    
+
 
 </body>
 
