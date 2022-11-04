@@ -105,7 +105,7 @@ CREATE TABLE `lib_user` (
   `role` enum('Admin','Dokter','Petugas Pendaftaran','Petugas Apotek') NOT NULL,
   `jenis_kelamin` enum('Laki-Laki','Perempuan','','') NOT NULL,
   `alamat` text NOT NULL,
-  `no_telp` int(13) NOT NULL
+  `no_telp` varchar(13) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
