@@ -1,3 +1,8 @@
+<?php
+require('../App/Model/User.php');
+$txt = new User();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,9 +10,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="assets/css/login.css"> -->
+
+    <!-- <link rel="stylesheet" href="../assets/css/login.css"> -->
     <title>Registrasi akun</title>
-    <link rel="stylesheet" href="assets/css/form.css">
+    <link rel="stylesheet" href="../assets/css/form.css">
 </head>
 
 <body id="body-pd">
@@ -15,32 +21,32 @@
         <nav class="nav">
             <div>
                 <div class="nav__brand">
-                    <img src="assets/icons8-menu-24 (1).png" name="" class="nav__toggle" id="nav-toggle"></img>
+                    <img src="../assets/img/icons8-menu-24.png" name="" class="nav__toggle" id="nav-toggle"></img>
                     <a href="#" class="nav__logo"></a>
                 </div>
 
                 <div class="nav__list">
                     <div class="nav__link collapse user">
-                        <img src="assets/icons8-user-24.png" name="" class="nav__icon"></img>
+                        <img src="../assets/img/icons8-user-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Nama</span>
                     </div>
                     <a href="dashboard.html" class="nav__link ">
-                        <img src="assets/icons8-home-page-24 (1).png" name="" class="nav__icon"></img>
+                        <img src="../assets/img/icons8-home-page-24 (1).png" name="" class="nav__icon"></img>
                         <span class="nav__name">Dashboard</span>
                     </a>
                     <div class="nav__link collapse">
-                        <img src="assets/icons8-health-book-24.png" name="" class="nav__icon"></img>
+                        <img src="../assets/img/icons8-health-book-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Pasien</span>
                     </div>
                     <div class="nav__link collapse">
-                        <img src="assets/icons8-id-card-24.png" name="" class="nav__icon"></img>
+                        <img src="../assets/img/icons8-id-card-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Pendaftaran</span>
                     </div>
                     <div class="nav__link collapse">
-                        <img src="assets/icons8-treatment-24.png" name="" class="nav__icon"></img>
+                        <img src="../assets/img/icons8-treatment-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Pemeriksaan</span>
 
-                        <img src="assets/icons8-expand-arrow-24 (1).png" name="" class="collapse__link"></img>
+                        <img src="../assets/img/icons8-expand-arrow-24 (1).png" name="" class="collapse__link"></img>
 
                         <ul class="collapse__menu">
                             <span><a href="#" class="collapse__sublink">Pasien Baru</a></span><br>
@@ -49,26 +55,26 @@
                         </ul>
                     </div>
                     <div class="nav__link collapse">
-                        <img src="assets/icons8-file-24 (1).png" name="" class="nav__icon"></img>
+                        <img src="../assets/img/icons8-file-24 (1).png" name="" class="nav__icon"></img>
                         <span class="nav__name">Koding</span>
                     </div>
                     <div class="nav__link collapse">
-                        <img src="assets/icons8-folder-24 (1).png" name="" class="nav__icon"></img>
+                        <img src="../assets/img/icons8-folder-24 (1).png" name="" class="nav__icon"></img>
                         <span class="nav__name">Pelaporan</span>
                     </div>
                     <!-- <a href="#" class="nav__link">
-                        <img src="assets/icons8-setting-24.png" name="" class="nav__icon"></img>
+                        <img src="../assets/img/icons8-setting-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Settings</span>
                     </a> -->
                 </div>
             </div>
-            <a href="login.html" class="nav__link">
-                <img src="assets/icons8-logout-24.png" name="" class="nav__icon"></img>
+            <a href="" class="nav__link">
+                <img src="../assets/img/icons8-logout-24.png" name="" class="nav__icon"></img>
                 <span class="nav__name">Log Out</span>
             </a>
         </nav>
     </div>
-    <form action="login.html" method="" class="form">
+    <form action="" method="POST" class="form">
         <div class="container">
             <!-- ============ HEADER START================= -->
 
@@ -81,7 +87,7 @@
                             </marquee>
                         </td>
                         <td>
-                            <img src="assets/logo.png" alt="logo PYB">
+                            <img src="../assets/img/logo.png" alt="logo PYB">
 
                         </td>
                     </tr>
@@ -90,30 +96,34 @@
             <!-- =============== HEADER END =============== -->
             <!-- =============== TITTLE FORM START ============== -->
             <div class="main">
-                <h2>Registrasi Akun Petugas</h2>
+                <h1>Registrasi Akun Petugas</h1>
+                <?php if (isset($_POST['submit'])) : ?>
+                <h2>
+                    <?= $txt->storeUser; ?>
+                </h2>
+                <?php endif ?>
             </div>
+
             <div id="content1">
                 <div class="column">
                     <div class="left">
                         <div class="mb-3">
                             <label for="" class="form-label">Nama Lengkap</label>
-                            <input type="text" class="form-control" id="" placeholder="Isi Sesuai KTP" required>
+                            <input type="text" class="form-control" name="nama" placeholder="Isi Sesuai KTP" required>
                         </div>
                         <div class="mb-3">
                             <label for="" class="form-label">Jenis Kelamin</label>
-                            <select class="form-select" aria-label="Default select example">
+                            <select name="jenis_kelamin" class="form-select" aria-label="Default select example">
                                 <option selected>--Pilih Jenis Kelamin--</option>
                                 <option value="">Perempuan</option>
                                 <option value="">Laki-Laki</option>
                             </select>
                         </div>
-                        <div class="mb-3">
-                            <label for="" class="form-label">Sebagai</label>
-                            <input type="text" class="form-control" id="" placeholder="Sebagai">
-                        </div>
+                        <input type="hidden" name="role" class="form-control" value="Admin">
+
                         <div class="mb-3">
                             <label for="" class="form-label">Alamat</label>
-                            <input type="text" class="form-control" id=""
+                            <input name="alamat" type="text" class="form-control"
                                 placeholder="Jl, RT, RW, Desa, Kec.,Kab, Kode Pos" required>
                         </div>
                     </div>
@@ -124,21 +134,22 @@
                     <div class="right">
                         <div class="mb-3">
                             <label for="" class="form-label">Nomor Telepon</label>
-                            <input type="text" class="form-control" id="" placeholder="" required>
+                            <input name="telp" type="text" class="form-control" placeholder="" required>
                         </div>
                         <div class="mb-3">
                             <label for="" class="form-label">Username</label>
-                            <input type="text" class="form-control" id="" placeholder="" required>
+                            <input name="username" type="text" class="form-control" placeholder="" required>
                         </div>
                         <div class="mb-3">
                             <label for="" class="form-label">Password</label>
-                            <input type="text" class="form-control" id="" placeholder="Masukkan 8 karakter" required>
+                            <input name="password" type="password" class="form-control"
+                                placeholder="Masukkan 8 karakter" required>
                         </div>
                     </div>
                 </div>
                 <table>
                     <tr>
-                        <td><button type="submit" class="submit"><b>Simpan</b></button></td>
+                        <td><button type="submit" name="submit" class="submit"><b>Simpan</b></button></td>
                         <td><button type="reset" class="reset"><b>Batal</b></button></td>
                     </tr>
                 </table>
@@ -149,24 +160,7 @@
             </div> -->
         </div>
     </form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script src="assets/js/sidebar.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
 </body>
 
 </html>

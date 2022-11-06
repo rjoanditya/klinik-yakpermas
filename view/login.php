@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login page</title>
     <!-- link css -->
-    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="../assets/css/login.css">
 
 
 </head>
@@ -18,8 +18,8 @@
             <table>
                 <tr>
                     <td>
-                        <img src="assets/img/logo.png" class="brand" alt="">
-                        <img src="assets/img/design.png" class="design" alt="">
+                        <img src="../assets/img/logo.png" class="brand" alt="">
+                        <img src="../assets/img/design.png" class="design" alt="">
                     </td>
                     <td>
                         <h1>Klinik Yakpermas</h1>
@@ -35,7 +35,7 @@
 
     </div>
     <div class="login-box">
-        <form action="" method="POST">
+        <form action="/Controller/controller.php" method="POST">
             <h2>Masuk Akun Anda</h2>
             <h5>Pastikan username & Password<br> yang anda masukkan benar</h5>
             <div class="row">

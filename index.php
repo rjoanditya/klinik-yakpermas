@@ -1,4 +1,8 @@
 <?php
 
-include('Controller/Controller.php');
+// use Controllers;
+// use Controller;
+
+include('App/Controllers/Controller.php');
+
 return Controller::dashboard();
