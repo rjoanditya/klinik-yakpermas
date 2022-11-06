@@ -1,6 +1,10 @@
 <?php
-require('../App/Model/User.php');
-$txt = new User();
+require('../App/Controllers/Controller.php');
+$post = new Auth();
+$table_name = 'lib_user';
+if (isset($_POST['submit'])) {
+    return $post->storeUser($table_name);
+}
 
 ?>
 <!DOCTYPE html>
@@ -97,11 +101,6 @@ $txt = new User();
             <!-- =============== TITTLE FORM START ============== -->
             <div class="main">
                 <h1>Registrasi Akun Petugas</h1>
-                <?php if (isset($_POST['submit'])) : ?>
-                <h2>
-                    <?= $txt->storeUser; ?>
-                </h2>
-                <?php endif ?>
             </div>
 
             <div id="content1">
@@ -115,8 +114,8 @@ $txt = new User();
                             <label for="" class="form-label">Jenis Kelamin</label>
                             <select name="jenis_kelamin" class="form-select" aria-label="Default select example">
                                 <option selected>--Pilih Jenis Kelamin--</option>
-                                <option value="">Perempuan</option>
-                                <option value="">Laki-Laki</option>
+                                <option value="Perempuan">Perempuan</option>
+                                <option value="Laki-Laki">Laki-Laki</option>
                             </select>
                         </div>
                         <input type="hidden" name="role" class="form-control" value="Admin">

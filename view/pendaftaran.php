@@ -1,4 +1,7 @@
-<?php ?>
+<?php
+include('../App/Controllers/Controller.php');
+$user = new Database();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -82,7 +85,6 @@
     </div>
     <div class="container">
         <!-- ============ HEADER START================= -->
-
         <div class="header">
             <table>
                 <tr>
@@ -152,6 +154,7 @@
                             <input type="text" name="" placeholder="Cari Tanggal Lahir">
                         </td>
                     </tr>
+                    <?php foreach ($user->getPasien() as $pasien) : ?>
                     <tr>
                         <td>1</td>
                         <td>
@@ -159,25 +162,17 @@
                                 <a href="#bg-modal" id="button">Daftar</a>
                             </button>
                         </td>
-                        <td>000120</td>
-                        <td>3301987654631234</td>
-                        <td>Jefri Nichol</td>
-                        <td>Laki-Laki</td>
-                        <td>1998-01-01</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
                         <td>
-                            <button class="aksi">
-                                Daftar
-                            </button>
+                            <?= $pasien['no_rm']; ?>
                         </td>
-                        <td>000121</td>
-                        <td>330198765469876</td>
-                        <td>Iqbaal Diafakhri Ramadhan</td>
-                        <td>Laki-Laki</td>
-                        <td>1998-01-01</td>
+                        <td><?= $pasien['nik']; ?></td>
+                        <td>
+                            <?= $pasien['nama_pasien']; ?>
+                        </td>
+                        <td><?= $pasien['jenis_kelamin']; ?></td>
+                        <td><?= $pasien['tgl_lahir']; ?></td>
                     </tr>
+                    <?php endforeach; ?>
                 </table>
             </div>
         </div>

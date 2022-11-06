@@ -1,17 +1,78 @@
 <?php
 
-/**
- * Backend
- * ----------------------------------------------------------
- * Controller digunakan untuk melakukan proses sistem
- * Hasil dari pemrosesan akan ditampilkan dalam view Frontend
- */
+// Backend
+// ----------------------------------------------------------
+// Controller digunakan untuk melakukan proses sistem
+// Hasil dari pemrosesan akan ditampilkan dalam view Frontend
 
-class Controller
+class Database
+{
+    var $db_hostname        = "localhost";
+    var $db_database        = "dbklinik";
+    var $db_username        = "root";
+    var $db_password        = "";
+    public $conn;
+
+    public function __construct()
+    {
+        $this->conn =  mysqli_connect($this->db_hostname, $this->db_username, $this->db_password, $this->db_database);
+    }
+
+    public function getPasien()
+    {
+        $query = $this->conn->query("SELECT * FROM lib_pasien");
+        while ($data = mysqli_fetch_array($query)) {
+            $pasien[] = $data;
+        }
+        return $pasien;
+    }
+}
+
+class Auth extends Database
+{
+    /**
+     * view daftar
+     */
+    public function signUp()
+    {
+        header("Location:./daftarakunpetugas.php");
+    }
+
+    /**
+     * get data from signUp
+     *
+     * @insert to lib_user
+     */
+    public function storeUser($table_name)
+    {
+        $data = [
+            'nama_lengkap'          => $_POST['nama'],
+            'jenis_kelamin' => $_POST['jenis_kelamin'],
+            'role'          => $_POST['role'],
+            'alamat'        => $_POST['alamat'],
+            'no_telp'       => $_POST['telp'],
+            'username'      => $_POST['username'],
+            'password'      => md5($_POST['password']),
+        ];
+
+        $string = "INSERT INTO " . $table_name . " (";
+        $string .= implode(",", array_keys($data)) . ') VALUES (';
+        $string .= "'" . implode("','", array_values($data)) . "')";
+        if (mysqli_query($this->conn, $string)) {
+            return true;
+        } else {
+            echo mysqli_error($this->con);
+        }
+
+        // $query = $this->conn->query("INSERT INTO Persons (FirstName, LastName, Age) VALUES ('Glenn', 'Quagmire', 33)");
+    }
+}
+
+class Controller extends Database
 {
     public static function login()
     {
-        header("Location./View/login.php");
+        header("Location:./login.php");
     }
 
 
