@@ -35,7 +35,7 @@
                     <div class="nav__link collapse">
                         <img src="../assets/img/icons8-id-card-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Pendaftaran</span>
-                        <img src="../assets/icons8-expand-arrow-24 (1).png" name="" class="collapse__link"></img>
+                        <img src="../assets/icons8-expand-arrow-24.png" name="" class="collapse__link"></img>
 
                         <ul class="collapse__menu">
                             <span><a href="../petugas/dashboard.html" class="collapse__sublink">Dashboard</a></span><br>
