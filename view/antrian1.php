@@ -100,7 +100,6 @@
         </div>
         <!-- =============== HEADER END =============== -->
         <!-- =============== content start ============= -->
-        <form action="" method="post">
             <div class="main">
                 <h1>Antrian</h1>
 
@@ -147,6 +146,7 @@
                         </tr>
                     </table>
                 </div>
+            <form action="" method="">
                 <table class="daftar-pasien">
                     <tr>
                         <th>No</th>
@@ -190,8 +190,8 @@
                         <td>1</td>
                     </tr>
                 </table>
+            </form>
             </div>
-        </form>
         <div class="content2">
         </div>
     </div>
