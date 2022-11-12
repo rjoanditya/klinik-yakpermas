@@ -34,15 +34,15 @@
                     </div>
                     <!-- <div class="nav__link collapse"> -->
                     <a href="../antrian1.html" class="nav__link ">
-                        <img src="assets/img/icons8-id-card-24.png" name="" class="nav__icon"></img>
+                        <img src="../assets/img/icons8-id-card-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Pendaftaran</span>
                     </a>
                     <!-- </div> -->
                     <div class="nav__link collapse">
-                        <img src="assets/img/icons8-treatment-24.png" name="" class="nav__icon"></img>
+                        <img src="../assets/img/icons8-treatment-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Pemeriksaan</span>
 
-                        <img src="assets/img/icons8-expand-arrow-24 (1).png" name="" class="collapse__link"></img>
+                        <img src="../assets/img/icons8-expand-arrow-24 (1).png" name="" class="collapse__link"></img>
 
                         <ul class="collapse__menu">
                             <span><a href="../kunjunganPasien.html" class="collapse__sublink">pasien baru</a></span><br>
