@@ -29,7 +29,7 @@
                         <span class="nav__name">Dashboard</span>
                     </a>
                     <div class="nav__link collapse">
-                        <img src="assets/img/icons8-health-book-24.png" name="" class="nav__icon"></img>
+                        <img src="../assets/img/icons8-health-book-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Pasien</span>
                     </div>
                     <!-- <div class="nav__link collapse"> -->
