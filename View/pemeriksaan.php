@@ -14,7 +14,7 @@
         <nav class="nav">
             <div>
                 <div class="nav__brand">
-                    <img src="../assets/img/icons8-menu-24 (1).png" name="" class="nav__toggle" id="nav-toggle"></img>
+                    <img src="../assets/img/icons8-menu-24.png" name="" class="nav__toggle" id="nav-toggle"></img>
                     <a href="#" class="nav__logo"></a>
                 </div>
 
@@ -54,7 +54,7 @@
                         </ul>
                     </div>
                     <a href="kodifikasi.php" class="nav__link collapse">
-                        <img src="../assets/icons8-file-24 (1).png" name="" class="nav__icon"></img>
+                        <img src="../assets/img/icons8-file-24 (1).png" name="" class="nav__icon"></img>
                         <span class="nav__name">Koding</span>
                     </a>
                     <a href="pelaporan.html" class="nav__link collapse">
