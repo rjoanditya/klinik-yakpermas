@@ -99,11 +99,7 @@
 
             <h1 class="tittle">SELAMAT DATANG</h1>
             <p class="tittle">KLINIK YAKPERMAS BANYUMAS</p>
-<<<<<<< HEAD:view/dashboard.html
             <img src="../assets/img/logo puskesmas.png" alt="">
-=======
-            <img src="../assets/img/logo puskesmas.png" alt="">
->>>>>>> 1c8bbf1bea1d87a6faf4260464fa8d385e208ae5:view/dashboard.php
         </div>
         <script src="../assets/js/sidebar.js"></script>
 </body>
