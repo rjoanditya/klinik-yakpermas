@@ -34,7 +34,7 @@ if (isset($_POST['submit'])) {
                         <img src="../assets/img/icons8-user-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Nama</span>
                     </div>
-                    <a href="dashboard.html" class="nav__link ">
+                    <a href="dashboard.php" class="nav__link ">
                         <img src="../assets/img/icons8-home-page-24 (1).png" name="" class="nav__icon"></img>
                         <span class="nav__name">Dashboard</span>
                     </a>

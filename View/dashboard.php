@@ -36,7 +36,7 @@
                         <span class="nav__name">Pasien</span>
                     </div>
                     <!-- <div class="nav__link collapse"> -->
-                    <a href="antrian1.html" class="nav__link ">
+                    <a href="antrian1.php" class="nav__link ">
                         <img src="../assets/img/icons8-id-card-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Pendaftaran</span>
                     </a>
