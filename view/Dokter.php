@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Antrian</title>
-    <link rel="stylesheet" href="../assets/css/antrian1.css">
+    <title>Kunjungan Pasien</title>
+    <link rel="stylesheet" href="../assets/css/dokter.css">
 </head>
 
 <body id="body-pd">
@@ -24,12 +24,12 @@
                         <img src="../assets/img/icons8-user-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Nama</span>
                     </div>
-                    <a href="dashboard.php" class="nav__link ">
+                    <a href="../petugas/dashboard.html" class="nav__link ">
                         <img src="../assets/img/icons8-home-page-24 (1).png" name="" class="nav__icon"></img>
                         <span class="nav__name">Dashboard</span>
                     </a>
                     <!-- <div class="nav__link collapse">
-                        <img src="../assets/icons8-health-book-24.png" name="" class="nav__icon"></img>
+                        <img src="../assets/img/icons8-health-book-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Pasien</span>
                     </div> -->
                     <div class="nav__link collapse">
@@ -38,18 +38,15 @@
                         <img src="../assets/img/icons8-expand-arrow-24 (1).png" name="" class="collapse__link"></img>
 
                         <ul class="collapse__menu">
-                            <span><a href="dashboard.php" class="collapse__sublink">Dashboard</a></span><br>
-                            <a href="#" class="collapse__sublink">Antrian</a>
-                            <a href="pendaftaran.php" class="collapse__sublink">Pendaftaran</a>
+                            <span><a href="../petugas/dashboard.html" class="collapse__sublink">Dashboard</a></span><br>
+                            <a href="antrian1.html" class="collapse__sublink">Antrian</a>
+                            <a href="pendaftaran.html" class="collapse__sublink">Pendaftaran</a>
                             <!-- <a href="#" class="collapse__sublink">Members</a> -->
                         </ul>
                     </div>
-                    <div class="collapse">
-                    <a href="dokter.php" class="nav__link ">
+                    <div class="nav__link collapse">
                         <img src="../assets/img/icons8-health-book-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Dokter</span>
-                    </a>
-
                     </div>
                     <div class="nav__link collapse">
                         <img src="../assets/img/icons8-treatment-24.png" name="" class="nav__icon"></img>
@@ -63,21 +60,21 @@
                             <!-- <a href="#" class="collapse__sublink">Members</a> -->
                         </ul>
                     </div>
-                    <a href="Kodifikasi.php" class="nav__link collapse">
+                    <a href="koding.html" class="nav__link collapse">
                         <img src="../assets/img/icons8-file-24 (1).png" name="" class="nav__icon"></img>
                         <span class="nav__name">Koding</span>
                     </a>
-                    <a href="pelaporan.php" class="nav__link collapse">
+                    <a href="pelaporan.html" class="nav__link collapse">
                         <img src="../assets/img/icons8-folder-24 (1).png" name="" class="nav__icon"></img>
                         <span class="nav__name">Pelaporan</span>
                     </a>
                     <!-- <a href="#" class="nav__link">
-                        <img src="../assets/icons8-setting-24.png" name="" class="nav__icon"></img>
+                        <img src="../assets/img/icons8-setting-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Settings</span>
                     </a> -->
                 </div>
             </div>
-            <a href="login.php" class="nav__link">
+            <a href="../petugas/login.html" class="nav__link">
                 <img src="../assets/img/icons8-logout-24.png" name="" class="nav__icon"></img>
                 <span class="nav__name">Log Out</span>
             </a>
@@ -103,102 +100,55 @@
         </div>
         <!-- =============== HEADER END =============== -->
         <!-- =============== content start ============= -->
-            <div class="main">
-                <h1>Antrian</h1>
-
+        <div class="main">
+        </div>
+        <div class="content1">
+            <h1>Jadwal Dokter</h1>
+            <div class="input-container">
+              <input placeholder="cari dokter.." type="text">
+              <a class="aksi-dokter" href="#">cari</a>
             </div>
-            <div class="content1">
-                <table class="tombol">
+            <div class="data-dokter">
+                <table class="tabel-dokter">
                     <tr>
-                        <td>
-                            <button class="tombol-antrian" name="">
-                                <!-- <img src="" alt=""> -->
-                                <a href="pendaftaran.php">Pendaftaran Langsung</a>
-                            </button>
-                        </td>
-                        <td>
-                            <button class="tombol-antrian" name="">
-                                Ambil Antrian
-                            </button>
-                        </td>
-                    </tr>
-                </table>
-                <h1>LOKET PENDAFTARAN 1</h1>
-                <div class="data-pasien">
-                    <table class="data-pasien">
-                        <tr>
-                            <th colspan="2">Menu Antrian</th>
-                            <th>Antrian Dilayani</th>
-                            <th>Sisa Antrian</th>
-                            <th>Total Antrian</th>
-                        </tr>
-                        <tr>
-                            <td>
-                                <button class="aksi">
-                                    Ulangi Antrian Berjalan
-                                </button>
-                            </td>
-                            <td>
-                                <button class="aksi">
-                                    Panggil Antrian Baru
-                                </button>
-                            </td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </table>
-                </div>
-            <form action="" method="">
-                <table class="daftar-pasien">
-                    <tr>
-                        <th>No</th>
-                        <th>Aksi</th>
+                        <th>Hari</th>
+                        <th>Jadwal</th>
                         <th>Nama</th>
-                        <th>Antrian</th>
                         <th>Poli</th>
-                        <th>Status Panggil</th>
-                        <th>Loket</th>
+                        <th>Aksi</th>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
+                        <td>Senin</td>
+                        <td>07.30 WIB - 12.00 WIB</td>
+                        <td>Dr. Jefri</td>
+                        <td>KIA</td>
                         <td>
-                            <input type="text" name="" placeholder="Cari Nama">
-                        </td>
-                        <td>
-                            <input type="text" name="" placeholder="Cari Antrian">
-                        </td>
-                        <td>
-                            <input type="text" name="" placeholder="Cari Poli">
-                        </td>
-                        <td>
-                            <input type="text" name="" placeholder="Cari Status Panggil">
-                        </td>
-                        <td>
-                            <input type="text" name="" placeholder="Cari Loket">
-                        </td>
+                          <a href="pemeriksaan.html" class="aksi-dokter aksi1">
+                          Edit
+                          </a>
+                          <a href="pemeriksaan.html" class="aksi-dokter">
+                          Hapus
+                          </a>
+                      </td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td>
-                            <a href="pendaftaran.php" class="aksi">
-                                Daftar
-                            </a>
-                        </td>
-                        <td>Jerry</td>
-                        <td>001</td>
+                        <td>Selasa</td>
+                        <td>07.30 WIB - 12.00 WIB</td>
+                        <td>Dr. Iqbaal</td>
                         <td>Umum</td>
-                        <td>-</td>
-                        <td>1</td>
+                        <td>
+                          <a href="pemeriksaan.html" class="aksi-dokter aksi1">
+                            Edit
+                            </a>
+                            <a href="pemeriksaan.html" class="aksi-dokter">
+                            Hapus
+                            </a>
+                      </td>
                     </tr>
                 </table>
-            </form>
             </div>
-        <div class="content2">
         </div>
     </div>
-
 
     <script src="../assets/js/sidebar.js"></script>
 </body>
