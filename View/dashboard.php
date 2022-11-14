@@ -53,13 +53,17 @@
                             <!-- <a href="#" class="collapse__sublink">Members</a> -->
                         </ul>
                     </div>
-                    <div class="nav__link collapse">
+                    <div class="collapse">
+                    <a href="kodifikasi.php" class="nav__link ">
                         <img src="../assets/img/icons8-file-24 (1).png" name="" class="nav__icon"></img>
                         <span class="nav__name">Koding</span>
+                    </a>
                     </div>
-                    <div class="nav__link collapse">
+                    <div class="collapse">
+                    <a href="pelaporan.php" class="nav__link ">
                         <img src="../assets/img/icons8-folder-24 (1).png" name="" class="nav__icon"></img>
                         <span class="nav__name">Pelaporan</span>
+                    </a>
                     </div>
                     <!-- <a href="#" class="nav__link">
                         <img src="assets/img/icons8-setting-24.png" name="" class="nav__icon"></img>
@@ -67,7 +71,7 @@
                     </a> -->
                 </div>
             </div>
-            <a href="login.html" class="nav__link">
+            <a href="login.php" class="nav__link">
                 <img src="../assets/img/icons8-logout-24.png" name="" class="nav__icon"></img>
                 <span class="nav__name">Log Out</span>
             </a>

@@ -24,7 +24,7 @@
                         <img src="../assets/img/icons8-user-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Nama</span>
                     </div>
-                    <a href="../petugas/dashboard.html" class="nav__link ">
+                    <a href="dashboard.php" class="nav__link ">
                         <img src="../assets/img/icons8-home-page-24 (1).png" name="" class="nav__icon"></img>
                         <span class="nav__name">Dashboard</span>
                     </a>
@@ -35,24 +35,26 @@
                     <div class="nav__link collapse">
                         <img src="../assets/img/icons8-id-card-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Pendaftaran</span>
-                        <img src="assets/icons8-expand-arrow-24 (1).png" name="" class="collapse__link"></img>
+                        <img src="../assets/img/icons8-expand-arrow-24 (1).png" name="" class="collapse__link"></img>
 
                         <ul class="collapse__menu">
-                            <span><a href="../petugas/dashboard.html" class="collapse__sublink">Dashboard</a></span><br>
-                            <a href="antrian1.html" class="collapse__sublink">Antrian</a>
-                            <a href="pendaftaran.html" class="collapse__sublink">Pendaftaran</a>
+                            <span><a href="dashboard.php" class="collapse__sublink">Dashboard</a></span><br>
+                            <a href="antrian1.php" class="collapse__sublink">Antrian</a>
+                            <a href="pendaftaran.php" class="collapse__sublink">Pendaftaran</a>
                             <!-- <a href="#" class="collapse__sublink">Members</a> -->
                         </ul>
                     </div>
-                    <div class="nav__link collapse">
+                    <div class="collapse">
+                    <a href="dokter.php" class="nav__link ">
                         <img src="../assets/img/icons8-health-book-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Dokter</span>
+                    </a>
                     </div>
                     <div class="nav__link collapse">
                         <img src="../assets/img/icons8-treatment-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Pemeriksaan</span>
 
-                        <img src="assets/img/icons8-expand-arrow-24 (1).png" name="" class="collapse__link"></img>
+                        <img src="../assets/img/icons8-expand-arrow-24 (1).png" name="" class="collapse__link"></img>
 
                         <ul class="collapse__menu">
                             <span><a href="" class="collapse__sublink">Pasien Baru</a></span><br>
@@ -60,11 +62,11 @@
                             <!-- <a href="#" class="collapse__sublink">Members</a> -->
                         </ul>
                     </div>
-                    <a href="koding.html" class="nav__link collapse">
+                    <a href="kodifikasi.php" class="nav__link collapse">
                         <img src="../assets/img/icons8-file-24 (1).png" name="" class="nav__icon"></img>
                         <span class="nav__name">Koding</span>
                     </a>
-                    <a href="pelaporan.html" class="nav__link collapse">
+                    <a href="pelaporan.php" class="nav__link collapse">
                         <img src="../assets/img/icons8-folder-24 (1).png" name="" class="nav__icon"></img>
                         <span class="nav__name">Pelaporan</span>
                     </a>
@@ -74,7 +76,7 @@
                     </a> -->
                 </div>
             </div>
-            <a href="login.html" class="nav__link">
+            <a href="login.php" class="nav__link">
                 <img src="../assets/img/icons8-logout-24.png" name="" class="nav__icon"></img>
                 <span class="nav__name">Log Out</span>
             </a>
@@ -122,7 +124,7 @@
                         <td>1</td>
                         <td>
                             <button class="aksi">
-                                <a href="pemeriksaan.html">Periksa</a>
+                                <a href="pemeriksaan.php">Periksa</a>
                             </button>
                         </td>
                         <td>000120</td>

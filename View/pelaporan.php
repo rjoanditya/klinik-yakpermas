@@ -24,7 +24,7 @@
                         <img src="../assets/img/icons8-user-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Nama</span>
                     </div>
-                    <a href="#" class="nav__link ">
+                    <a href="dashboard.php" class="nav__link ">
                         <img src="../assets/img/icons8-home-page-24 (1).png" name="" class="nav__icon"></img>
                         <span class="nav__name">Dashboard</span>
                     </a>
@@ -33,7 +33,7 @@
                         <span class="nav__name">Pasien</span>
                     </div>
                     <!-- <div class="nav__link collapse"> -->
-                    <a href="../antrian1.html" class="nav__link ">
+                    <a href="antrian1.php" class="nav__link ">
                         <img src="../assets/img/icons8-id-card-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Pendaftaran</span>
                     </a>
@@ -45,14 +45,16 @@
                         <img src="../assets/img/icons8-expand-arrow-24 (1).png" name="" class="collapse__link"></img>
 
                         <ul class="collapse__menu">
-                            <span><a href="../kunjunganPasien.html" class="collapse__sublink">pasien baru</a></span><br>
+                            <span><a href="../kunjunganPasien.php" class="collapse__sublink">pasien baru</a></span><br>
                             <a href="#" class="collapse__sublink">pasien lama</a>
                             <!-- <a href="#" class="collapse__sublink">Members</a> -->
                         </ul>
                     </div>
-                    <div class="nav__link collapse">
+                    <div class="collapse">
+                    <a href="kodifikasi.php" class="nav__link ">
                         <img src="../assets/img/icons8-file-24 (1).png" name="" class="nav__icon"></img>
                         <span class="nav__name">Koding</span>
+                    </a>
                     </div>
                     <div class="nav__link collapse">
                         <img src="../assets/img/icons8-treatment-24.png" name="" class="nav__icon"></img>
@@ -71,7 +73,7 @@
 
                 </div>
             </div>
-            <a href="login.html" class="nav__link">
+            <a href="login.php" class="nav__link">
                 <img src="../assets/img/icons8-logout-24.png" name="" class="nav__icon"></img>
                 <span class="nav__name">Log Out</span>
             </a>

@@ -14,11 +14,11 @@ $user = new Database();
 </head>
 
 <body id="body-pd">
-    <div class="l-navbar" id="navbar">
+<div class="l-navbar" id="navbar">
         <nav class="nav">
             <div>
                 <div class="nav__brand">
-                    <img src="../assets/img/icons8-menu-24 (1).png" name="" class="nav__toggle" id="nav-toggle"></img>
+                    <img src="../assets/img/icons8-menu-24.png" name="" class="nav__toggle" id="nav-toggle"></img>
                     <a href="#" class="nav__logo"></a>
                 </div>
 
@@ -27,29 +27,31 @@ $user = new Database();
                         <img src="../assets/img/icons8-user-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Nama</span>
                     </div>
-                    <a href="../petugas/dashboard.php" class="nav__link ">
+                    <a href="dashboard.php" class="nav__link ">
                         <img src="../assets/img/icons8-home-page-24 (1).png" name="" class="nav__icon"></img>
                         <span class="nav__name">Dashboard</span>
                     </a>
                     <!-- <div class="nav__link collapse">
-                        <img src="../assets/icons8-health-book-24.png" name="" class="nav__icon"></img>
+                        <img src="assets/icons8-health-book-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Pasien</span>
                     </div> -->
                     <div class="nav__link collapse">
                         <img src="../assets/img/icons8-id-card-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Pendaftaran</span>
-                        <img src="../assets/icons8-expand-arrow-24 (1).png" name="" class="collapse__link"></img>
+                        <img src="../assets/img/icons8-expand-arrow-24 (1).png" name="" class="collapse__link"></img>
 
                         <ul class="collapse__menu">
-                            <span><a href="../petugas/dashboard.php" class="collapse__sublink">Dashboard</a></span><br>
+                            <span><a href="dashboard.php" class="collapse__sublink">Dashboard</a></span><br>
                             <a href="antrian1.php" class="collapse__sublink">Antrian</a>
-                            <a href="#" class="collapse__sublink">Pendaftaran</a>
+                            <a href="pendaftaran.php" class="collapse__sublink">Pendaftaran</a>
                             <!-- <a href="#" class="collapse__sublink">Members</a> -->
                         </ul>
                     </div>
-                    <div class="nav__link collapse">
+                    <div class="collapse">
+                    <a href="dokter.php" class="nav__link ">
                         <img src="../assets/img/icons8-health-book-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Dokter</span>
+                    </a>
                     </div>
                     <div class="nav__link collapse">
                         <img src="../assets/img/icons8-treatment-24.png" name="" class="nav__icon"></img>
@@ -63,7 +65,7 @@ $user = new Database();
                             <!-- <a href="#" class="collapse__sublink">Members</a> -->
                         </ul>
                     </div>
-                    <a href="Koding.php" class="nav__link collapse">
+                    <a href="kodifikasi.php" class="nav__link collapse">
                         <img src="../assets/img/icons8-file-24 (1).png" name="" class="nav__icon"></img>
                         <span class="nav__name">Koding</span>
                     </a>
@@ -72,12 +74,12 @@ $user = new Database();
                         <span class="nav__name">Pelaporan</span>
                     </a>
                     <!-- <a href="#" class="nav__link">
-                        <img src="../assets/icons8-setting-24.png" name="" class="nav__icon"></img>
+                        <img src="assets/icons8-setting-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Settings</span>
                     </a> -->
                 </div>
             </div>
-            <a href="../petugas/login.php" class="nav__link">
+            <a href="login.php" class="nav__link">
                 <img src="../assets/img/icons8-logout-24.png" name="" class="nav__icon"></img>
                 <span class="nav__name">Log Out</span>
             </a>
