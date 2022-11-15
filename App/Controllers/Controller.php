@@ -80,7 +80,8 @@ class Auth extends Database
         if ($query) {
             header("Location:./dashboard.php");
         }
-        return ('username tidak terdaftar');
+        echo ('gagal');
+        // return ('username tidak terdaftar');
 
         // $string .= implode(",", array_keys($data)) . ') VALUES (';
         // $string .= "'" . implode("','", array_values($data)) . "')";
@@ -96,5 +97,9 @@ class Controller extends Database
             header("Location:./View/");
         }
         header("Location:./View/");
+    }
+
+    public static function baru()
+    {
     }
 }

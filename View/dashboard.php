@@ -1,4 +1,6 @@
-<?php 
+<?php
+require('../App/Controllers/Controller.php');
+$baru = new Controller();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -54,16 +56,16 @@
                         </ul>
                     </div>
                     <div class="collapse">
-                    <a href="kodifikasi.php" class="nav__link ">
-                        <img src="../assets/img/icons8-file-24 (1).png" name="" class="nav__icon"></img>
-                        <span class="nav__name">Koding</span>
-                    </a>
+                        <a href="kodifikasi.php" class="nav__link ">
+                            <img src="../assets/img/icons8-file-24 (1).png" name="" class="nav__icon"></img>
+                            <span class="nav__name">Koding</span>
+                        </a>
                     </div>
                     <div class="collapse">
-                    <a href="pelaporan.php" class="nav__link ">
-                        <img src="../assets/img/icons8-folder-24 (1).png" name="" class="nav__icon"></img>
-                        <span class="nav__name">Pelaporan</span>
-                    </a>
+                        <a href="pelaporan.php" class="nav__link ">
+                            <img src="../assets/img/icons8-folder-24 (1).png" name="" class="nav__icon"></img>
+                            <span class="nav__name">Pelaporan</span>
+                        </a>
                     </div>
                     <!-- <a href="#" class="nav__link">
                         <img src="assets/img/icons8-setting-24.png" name="" class="nav__icon"></img>

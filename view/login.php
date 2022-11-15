@@ -3,7 +3,7 @@ require('../App/Controllers/Controller.php');
 $login = new Auth();
 $table_name = 'lib_user';
 if (isset($_POST['submit'])) {
-    return $post->storeLogin($table_name);
+    return $login->storeLogin($table_name);
 }
 
 ?>
@@ -57,7 +57,7 @@ if (isset($_POST['submit'])) {
                     </div>
                     <div class="mb-3">
                         <label for="" class="form-label">Lupa kata sandi ?</label> <br>
-                        <button type="submit" class="button" value="submit"><b>Masuk</b></button>
+                        <button type="submit" name="submit" class="button" value="submit"><b>Masuk</b></button>
                         <p>Belum memiliki akun <a href="daftarakunpetugas.html">daftar disini</a></p>
                     </div>
                 </div>
