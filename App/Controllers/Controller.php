@@ -7,10 +7,10 @@
 
 class Database
 {
-    var $db_hostname        = "localhost";
-    var $db_database        = "dbklinik";
-    var $db_username        = "root";
-    var $db_password        = "";
+    var $db_hostname  = "localhost";
+    var $db_database  = "dbklinik";
+    var $db_username  = "root";
+    var $db_password  = "";
     public $conn;
 
     public function __construct()
@@ -46,7 +46,7 @@ class Auth extends Database
     public function storeUser($table_name)
     {
         $data = [
-            'nama_lengkap'          => $_POST['nama'],
+            'nama_lengkap'  => $_POST['nama'],
             'jenis_kelamin' => $_POST['jenis_kelamin'],
             'role'          => $_POST['role'],
             'alamat'        => $_POST['alamat'],
@@ -59,23 +59,36 @@ class Auth extends Database
         $string .= implode(",", array_keys($data)) . ') VALUES (';
         $string .= "'" . implode("','", array_values($data)) . "')";
         if (mysqli_query($this->conn, $string)) {
-            return true;
+            return header("Location:./login.php");
         } else {
-            echo mysqli_error($this->con);
+            echo mysqli_error($this->conn);
         }
-
-        // $query = $this->conn->query("INSERT INTO Persons (FirstName, LastName, Age) VALUES ('Glenn', 'Quagmire', 33)");
     }
-}
 
-class Controller extends Database
-{
     public static function login()
     {
         header("Location:./login.php");
     }
 
+    public function storeLogin($table_name)
+    {
+        $data = [
+            'username' => $_POST['username'],
+            'password' => md5($_POST['password']),
+        ];
+        $query = "SELECT * FROM " . $table_name . " WHERE username =" . $data['username'] . "&& password=" . $data['password'];
+        if ($query) {
+            header("Location:./dashboard.php");
+        }
+        return ('username tidak terdaftar');
 
+        // $string .= implode(",", array_keys($data)) . ') VALUES (';
+        // $string .= "'" . implode("','", array_values($data)) . "')";
+    }
+}
+
+class Controller extends Database
+{
     public static function dashboard()
     {
         $_SESSION['login'];

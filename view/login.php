@@ -1,3 +1,12 @@
+<?php
+require('../App/Controllers/Controller.php');
+$login = new Auth();
+$table_name = 'lib_user';
+if (isset($_POST['submit'])) {
+    return $post->storeLogin($table_name);
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,23 +44,22 @@
 
     </div>
     <div class="login-box">
-        <form action="/Controller/controller.php" method="POST">
+        <form action="" method="POST">
             <h2>Masuk Akun Anda</h2>
             <h5>Pastikan username & Password<br> yang anda masukkan benar</h5>
             <div class="row">
                 <div class="col-6">
                     <div class="mb-3">
-                        <input type="text" class="form-control" name="" placeholder="Username">
+                        <input type="text" class="form-control" name="username" placeholder="Username">
                     </div>
                     <div class="mb-3">
-                        <input type="password" class="form-control" name="" placeholder="Password">
+                        <input type="password" class="form-control" name="password" placeholder="Password">
                     </div>
                     <div class="mb-3">
                         <label for="" class="form-label">Lupa kata sandi ?</label> <br>
-                        <a class="button" href="dashboard.php"><b>Masuk</b></a>
+                        <button type="submit" class="button" value="submit"><b>Masuk</b></button>
                         <p>Belum memiliki akun <a href="daftarakunpetugas.html">daftar disini</a></p>
                     </div>
-
                 </div>
             </div>
         </form>
