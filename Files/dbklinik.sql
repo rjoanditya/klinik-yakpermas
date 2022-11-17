@@ -100,12 +100,12 @@ CREATE TABLE `lib_poli` (
 CREATE TABLE `lib_user` (
   `id_user` int(11) NOT NULL,
   `nama_lengkap` varchar(50) NOT NULL,
-  `username` int(50) NOT NULL,
-  `password` int(50) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
   `role` enum('Admin','Dokter','Petugas Pendaftaran','Petugas Apotek') NOT NULL,
   `jenis_kelamin` enum('Laki-Laki','Perempuan','','') NOT NULL,
   `alamat` text NOT NULL,
-  `no_telp` int(13) NOT NULL
+  `no_telp` varchar(13) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
