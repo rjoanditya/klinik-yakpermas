@@ -58,7 +58,7 @@ if (isset($_POST['submit'])) {
                     <div class="mb-3">
                         <label for="" class="form-label">Lupa kata sandi ?</label> <br>
                         <button type="submit" name="submit" class="button" value="submit"><b>Masuk</b></button>
-                        <p>Belum memiliki akun <a href="daftarakunpetugas.html">daftar disini</a></p>
+                        <p>Belum memiliki akun <a href="daftarakunpetugas.php">daftar disini</a></p>
                     </div>
                 </div>
             </div>
