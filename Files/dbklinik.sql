@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 04 Nov 2022 pada 04.45
--- Versi server: 10.4.19-MariaDB
--- Versi PHP: 7.3.28
+-- Waktu pembuatan: 17 Nov 2022 pada 11.55
+-- Versi server: 10.4.25-MariaDB
+-- Versi PHP: 7.4.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -71,13 +71,22 @@ CREATE TABLE `jadwal_dokter` (
 CREATE TABLE `lib_pasien` (
   `id_pasien` int(11) NOT NULL,
   `no_rm` int(5) NOT NULL,
-  `nik` int(16) NOT NULL,
+  `nik` varchar(16) NOT NULL,
+  `debitur` enum('UMUM','BPJS','','') NOT NULL,
+  `perawatan` enum('Rawat Jalan','Rawat Inap','Rawat Gawat Darurat','') NOT NULL,
+  `jenis_kunjungan` enum('Kunjungan Sehat','Kunjungan Sakit','','') NOT NULL,
+  `poli` enum('Pemeriksaan Umum','Poli Gigi','KIA','') NOT NULL,
   `nama_pasien` varchar(50) NOT NULL,
   `tempat_lahir` varchar(50) NOT NULL,
   `tgl_lahir` date NOT NULL,
+  `umur` int(3) NOT NULL,
   `jenis_kelamin` enum('Laki-Laki','Perempuan','','') NOT NULL,
+  `gol_darah` enum('A','B','O','AB') NOT NULL,
+  `agama` enum('Islam','Katolik','Protestan','Hindu','Budha','Konghucu') NOT NULL,
+  `pendidikan` enum('Tidak/Belum Sekolah','TK/PAUD','SD','SMP','SMA/K','Perguruan Tinggi') NOT NULL,
+  `status_pernikahan` enum('Sudah Menikah','Belum Menikah','','') NOT NULL,
   `alamat` text NOT NULL,
-  `pekerjaan` varchar(20) NOT NULL
+  `ibu_kandung` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
