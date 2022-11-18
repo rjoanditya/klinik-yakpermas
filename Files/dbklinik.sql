@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 17 Nov 2022 pada 11.55
+-- Waktu pembuatan: 18 Nov 2022 pada 02.46
 -- Versi server: 10.4.25-MariaDB
 -- Versi PHP: 7.4.30
 
@@ -48,7 +48,9 @@ CREATE TABLE `diagnosis` (
   `respiratory_rate` int(3) NOT NULL,
   `heart_rate` int(2) NOT NULL,
   `gol_darah` varchar(3) NOT NULL,
-  `id_user` int(11) NOT NULL
+  `id_user` int(11) NOT NULL,
+  `id_obat` int(11) NOT NULL,
+  `jumlah_obat` int(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -65,6 +67,18 @@ CREATE TABLE `jadwal_dokter` (
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `lib_obat`
+--
+
+CREATE TABLE `lib_obat` (
+  `id_obat` int(11) NOT NULL,
+  `nama_obat` varchar(50) NOT NULL,
+  `harga_satuan` int(7) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `lib_pasien`
 --
 
@@ -72,10 +86,6 @@ CREATE TABLE `lib_pasien` (
   `id_pasien` int(11) NOT NULL,
   `no_rm` int(5) NOT NULL,
   `nik` varchar(16) NOT NULL,
-  `debitur` enum('UMUM','BPJS','','') NOT NULL,
-  `perawatan` enum('Rawat Jalan','Rawat Inap','Rawat Gawat Darurat','') NOT NULL,
-  `jenis_kunjungan` enum('Kunjungan Sehat','Kunjungan Sakit','','') NOT NULL,
-  `poli` enum('Pemeriksaan Umum','Poli Gigi','KIA','') NOT NULL,
   `nama_pasien` varchar(50) NOT NULL,
   `tempat_lahir` varchar(50) NOT NULL,
   `tgl_lahir` date NOT NULL,
@@ -127,7 +137,9 @@ CREATE TABLE `pendaftaran_poli` (
   `id_pendaftaran` int(11) NOT NULL,
   `id_pasien` int(11) NOT NULL,
   `id_poli` int(11) NOT NULL,
-  `jenis_perawatan` enum('Rawat jalan','Rawat Inap','','') NOT NULL,
+  `debitur` enum('BPJS','UMUM','','') NOT NULL,
+  `jenis_perawatan` enum('Rawat Jalan','Rawat Inap','Rawat Gawat Darurat','') NOT NULL,
+  `jenis_kunjungan` enum('Kunjungan Sakit','Kunjungan Sehat','','') NOT NULL,
   `tgl_periksa` date NOT NULL,
   `keterangan` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -141,7 +153,7 @@ CREATE TABLE `pendaftaran_poli` (
 CREATE TABLE `transaksi` (
   `id_transaksi` int(11) NOT NULL,
   `id_diagnosis` int(11) NOT NULL,
-  `status` enum('Sudah Membayar','Belum Membayar','','') NOT NULL
+  `total_harga` int(7) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -153,6 +165,12 @@ CREATE TABLE `transaksi` (
 --
 ALTER TABLE `diagnosis`
   ADD PRIMARY KEY (`id_diagnosis`) USING BTREE;
+
+--
+-- Indeks untuk tabel `lib_obat`
+--
+ALTER TABLE `lib_obat`
+  ADD PRIMARY KEY (`id_obat`);
 
 --
 -- Indeks untuk tabel `lib_pasien`
@@ -193,6 +211,12 @@ ALTER TABLE `transaksi`
 --
 ALTER TABLE `diagnosis`
   MODIFY `id_diagnosis` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT untuk tabel `lib_obat`
+--
+ALTER TABLE `lib_obat`
+  MODIFY `id_obat` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT untuk tabel `lib_pasien`
