@@ -44,7 +44,7 @@
                         <img src="../assets/img/icons8-health-book-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Dokter</span>
                     </a>
-                    <a href="pemeriksaan.php" class="nav__link ">>
+                    <a href="pemeriksaan.php" class="nav__link ">
                         <img src="../assets/img/icons8-treatment-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Pemeriksaan</span>
                     </a>

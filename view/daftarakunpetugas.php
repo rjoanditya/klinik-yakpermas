@@ -42,15 +42,15 @@ if (isset($_POST['submit'])) {
                         <img src="../assets/img/icons8-health-book-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Pasien</span>
                     </a>
-                    <a href="pendaftaran.php" class="nav__link ">>
+                    <a href="pendaftaran.php" class="nav__link ">
                         <img src="../assets/img/icons8-id-card-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Pendaftaran</span>
                     </a>
-                    <a href="pemeriksaan.php" class="nav__link ">>
+                    <a href="pemeriksaan.php" class="nav__link ">
                         <img src="../assets/img/icons8-treatment-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Pemeriksaan</span>
                     </a>
-                    <a href="kodifikasi.php" class="nav__link ">>
+                    <a href="kodifikasi.php" class="nav__link ">
                         <img src="../assets/img/icons8-file-24 (1).png" name="" class="nav__icon"></img>
                         <span class="nav__name">Kodifikasi</span>
                     </a>

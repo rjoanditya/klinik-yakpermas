@@ -33,7 +33,7 @@ $baru = new Controller();
                         <img src="../assets/img/icons8-home-page-24 (1).png" name="" class="nav__icon"></img>
                         <span class="nav__name">Dashboard</span>
                     </a>
-                    <a href="kunjunganPasien.php" class="nav__link ">>
+                    <a href="kunjunganPasien.php" class="nav__link ">
                         <img src="../assets/img/icons8-health-book-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Pasien</span>
                     </a>
@@ -43,7 +43,7 @@ $baru = new Controller();
                         <span class="nav__name">Pendaftaran</span>
                     </a>
                     <!-- </div> -->
-                    <a href="pemeriksaan.php" class="nav__link ">>
+                    <a href="pemeriksaan.php" class="nav__link ">
                         <img src="../assets/img/icons8-treatment-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Pemeriksaan</span>
                     </a>
