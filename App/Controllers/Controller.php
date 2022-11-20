@@ -26,6 +26,16 @@ class Database
         }
         return $pasien;
     }
+
+    public function getAntrianObat()
+    {
+        $query = $this->conn->query("SELECT pendaftaran_poli.id_pendaftaran, lib_pasien.nama_pasien, lib_obat.nama_obat, diagnosis.jumlah_obat, lib_obat.harga_satuan, lib_poli.nama_poli FROM diagnosis INNER JOIN pendaftaran_poli ON pendaftaran_poli.id_pendaftaran = diagnosis.id_pendaftaran INNER JOIN lib_pasien ON pendaftaran_poli.id_pasien = lib_pasien.id_pasien INNER JOIN lib_poli ON pendaftaran_poli.id_poli = lib_poli.id_poli INNER JOIN lib_obat ON diagnosis.id_obat = lib_obat.id_obat");
+        while ($data = mysqli_fetch_array($query)) {
+            $pasien[] = $data;
+        }
+        return $pasien;
+    }
+
 }
 
 class Auth extends Database

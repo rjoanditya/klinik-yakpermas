@@ -1,4 +1,8 @@
-<?php ?>
+<?php
+include('../App/Controllers/Controller.php');
+$user = new Database();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,15 +45,14 @@
                         </ul>
                     </div>
                     <div class="collapse">
-                    <a href="dokter.php" class="nav__link ">
+                    <a href="antrian-obat.php" class="nav__link ">
                         <img src="../assets/img/icons8-health-book-24.png" name="" class="nav__icon"></img>
-                        <span class="nav__name">Dokter</span>
+                        <span class="nav__name">Antrian Obat Pasien</span>
                     </a>
                     </div>
-                    <a href="pemeriksaan.php" class="nav__link ">>
+                    <a href="pemeriksaan.php" class="nav__link ">
                         <img src="../assets/img/icons8-treatment-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Pemeriksaan</span>
-                    </div>
                     <a href="kodifikasi.php" class="nav__link collapse">
                         <img src="../assets/img/icons8-file-24 (1).png" name="" class="nav__icon"></img>
                         <span class="nav__name">Kodifikasi</span>
@@ -90,9 +93,15 @@
             </div>
             <!-- =============== HEADER END =============== -->
             <!-- main section -->
+            <?php
+            $id = $_GET["id"];
+            $allDosen = mysqli_query($user->conn, "SELECT pendaftaran_poli.id_pendaftaran, lib_pasien.nama_pasien, lib_obat.nama_obat, diagnosis.jumlah_obat, lib_obat.harga_satuan, lib_poli.nama_poli FROM diagnosis INNER JOIN pendaftaran_poli ON pendaftaran_poli.id_pendaftaran = diagnosis.id_pendaftaran INNER JOIN lib_pasien ON pendaftaran_poli.id_pasien = lib_pasien.id_pasien INNER JOIN lib_poli ON pendaftaran_poli.id_poli = lib_poli.id_poli INNER JOIN lib_obat ON diagnosis.id_obat = lib_obat.id_obat WHERE pendaftaran_poli.id_pendaftaran = $id");
+            $dosen = mysqli_fetch_assoc($allDosen);
+            ?>
+            
             <div class="main">
                 <h2>OBAT</h2>
-                <h3>Nama Pasien</h3>  
+                <h3><?= $dosen['nama_pasien']; ?></h3>  
             </div>
             <div class="content1">
                 <table class="Obat">
@@ -105,10 +114,10 @@
                      </tr>
                      <tr>
                         <td>1</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td><?= $dosen['nama_obat']; ?></td>
+                        <td><?= $dosen['jumlah_obat']; ?></td>
+                        <td><?= $dosen['harga_satuan']; ?></td>
+                        <td><?= $dosen['jumlah_obat']*$dosen['harga_satuan']; ?></td>
                     </tr>
                     <tr>
                         <td>2</td>
@@ -130,27 +139,6 @@
                         <td></td>
                         <td></td>
                         <td></td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <tr>
-                            <td>6</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
                     </tr>
                 </table>
     <div class="aksi">
