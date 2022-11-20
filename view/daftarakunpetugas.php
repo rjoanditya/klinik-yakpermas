@@ -38,41 +38,29 @@ if (isset($_POST['submit'])) {
                         <img src="../assets/img/icons8-home-page-24 (1).png" name="" class="nav__icon"></img>
                         <span class="nav__name">Dashboard</span>
                     </a>
-                    <div class="nav__link collapse">
+                    <a href="kunjunganPasien.php" class="nav__link ">
                         <img src="../assets/img/icons8-health-book-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Pasien</span>
-                    </div>
-                    <div class="nav__link collapse">
+                    </a>
+                    <a href="pendaftaran.php" class="nav__link ">>
                         <img src="../assets/img/icons8-id-card-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Pendaftaran</span>
-                    </div>
-                    <div class="nav__link collapse">
+                    </a>
+                    <a href="pemeriksaan.php" class="nav__link ">>
                         <img src="../assets/img/icons8-treatment-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Pemeriksaan</span>
-
-                        <img src="../assets/img/icons8-expand-arrow-24 (1).png" name="" class="collapse__link"></img>
-
-                        <ul class="collapse__menu">
-                            <span><a href="#" class="collapse__sublink">Pasien Baru</a></span><br>
-                            <a href="#" class="collapse__sublink">Pasien Lama</a>
-                            <!-- <a href="#" class="collapse__sublink">Members</a> -->
-                        </ul>
-                    </div>
-                    <div class="nav__link collapse">
+                    </a>
+                    <a href="kodifikasi.php" class="nav__link ">>
                         <img src="../assets/img/icons8-file-24 (1).png" name="" class="nav__icon"></img>
-                        <span class="nav__name">Koding</span>
-                    </div>
-                    <div class="nav__link collapse">
+                        <span class="nav__name">Kodifikasi</span>
+                    </a>
+                    <a href="pelaporan.php" class="nav__link ">
                         <img src="../assets/img/icons8-folder-24 (1).png" name="" class="nav__icon"></img>
                         <span class="nav__name">Pelaporan</span>
-                    </div>
-                    <!-- <a href="#" class="nav__link">
-                        <img src="../assets/img/icons8-setting-24.png" name="" class="nav__icon"></img>
-                        <span class="nav__name">Settings</span>
-                    </a> -->
+                    </a>
                 </div>
             </div>
-            <a href="" class="nav__link">
+            <a href="login.php" class="nav__link">
                 <img src="../assets/img/icons8-logout-24.png" name="" class="nav__icon"></img>
                 <span class="nav__name">Log Out</span>
             </a>

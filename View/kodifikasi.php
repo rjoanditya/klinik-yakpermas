@@ -28,46 +28,27 @@
                         <img src="../assets/img/icons8-home-page-24 (1).png" name="" class="nav__icon"></img>
                         <span class="nav__name">Dashboard</span>
                     </a>
-                    <div class="collapse">
-                    <a href="#" class="nav__link ">
+                    <a href="kunjunganPasien.php" class="nav__link ">
                         <img src="../assets/img/icons8-health-book-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Pasien</span>
                     </a>
-                    </div>
-                    <!-- <div class="nav__link collapse"> -->
-                        <a href="../antrian1.html" class="nav__link ">
-                            <img src="../assets/img/icons8-id-card-24.png" name="" class="nav__icon"></img>
-                            <span class="nav__name">Pendaftaran</span>
-                        </a>
-                    <!-- </div> -->
-                    <div class="nav__link collapse">
+                    <a href="../antrian1.html" class="nav__link ">
+                        <img src="../assets/img/icons8-id-card-24.png" name="" class="nav__icon"></img>
+                        <span class="nav__name">Pendaftaran</span>
+                    </a>
+
+                    <a href="pemeriksaan.php" class="nav__link ">>
                         <img src="../assets/img/icons8-treatment-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Pemeriksaan</span>
-
-                        <img src="../assets/img/icons8-expand-arrow-24 (1).png" name="" class="collapse__link"></img>
-
-                        <ul class="collapse__menu">
-                            <span><a href="kunjunganPasien.php" class="collapse__sublink">pasien baru</a></span><br>
-                            <a href="#" class="collapse__sublink">pasien lama</a>
-                            <!-- <a href="#" class="collapse__sublink">Members</a> -->
-                        </ul>
-                    </div>
-                    <div class="collapse">
-                    <a href="#" class="nav__link ">
+                    </a>
+                    <a href="kodifikasi.php" class="nav__link ">
                         <img src="../assets/img/icons8-file-24 (1).png" name="" class="nav__icon"></img>
                         <span class="nav__name">Koding</span>
                     </a>
-                    </div>
-                    <div class="collapse">
                     <a href="pelaporan.php" class="nav__link ">
                         <img src="../assets/img/icons8-folder-24 (1).png" name="" class="nav__icon"></img>
                         <span class="nav__name">Pelaporan</span>
                     </a>
-                    </div>
-                    <!-- <a href="#" class="nav__link">
-                        <img src="assets/icons8-setting-24.png" name="" class="nav__icon"></img>
-                        <span class="nav__name">Settings</span>
-                    </a> -->
                 </div>
             </div>
             <a href="login.php" class="nav__link">

@@ -15,7 +15,7 @@ $user = new Database();
 
 <body id="body-pd">
 <div class="l-navbar" id="navbar">
-        <nav class="nav">
+<nav class="nav">
             <div>
                 <div class="nav__brand">
                     <img src="../assets/img/icons8-menu-24.png" name="" class="nav__toggle" id="nav-toggle"></img>
@@ -31,10 +31,6 @@ $user = new Database();
                         <img src="../assets/img/icons8-home-page-24 (1).png" name="" class="nav__icon"></img>
                         <span class="nav__name">Dashboard</span>
                     </a>
-                    <!-- <div class="nav__link collapse">
-                        <img src="assets/icons8-health-book-24.png" name="" class="nav__icon"></img>
-                        <span class="nav__name">Pasien</span>
-                    </div> -->
                     <div class="nav__link collapse">
                         <img src="../assets/img/icons8-id-card-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Pendaftaran</span>
@@ -53,28 +49,20 @@ $user = new Database();
                         <span class="nav__name">Dokter</span>
                     </a>
                     </div>
-                    <div class="nav__link collapse">
+                    <a href="pemeriksaan.php" class="nav__link ">>
                         <img src="../assets/img/icons8-treatment-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Pemeriksaan</span>
-
-                        <img src="../assets/img/icons8-expand-arrow-24 (1).png" name="" class="collapse__link"></img>
-
-                        <ul class="collapse__menu">
-                            <span><a href="" class="collapse__sublink">Pasien Baru</a></span><br>
-                            <a href="" class="collapse__sublink">Pasien Lama</a>
-                            <!-- <a href="#" class="collapse__sublink">Members</a> -->
-                        </ul>
                     </div>
                     <a href="kodifikasi.php" class="nav__link collapse">
                         <img src="../assets/img/icons8-file-24 (1).png" name="" class="nav__icon"></img>
-                        <span class="nav__name">Koding</span>
+                        <span class="nav__name">Kodifikasi</span>
                     </a>
                     <a href="pelaporan.php" class="nav__link collapse">
                         <img src="../assets/img/icons8-folder-24 (1).png" name="" class="nav__icon"></img>
                         <span class="nav__name">Pelaporan</span>
                     </a>
                     <!-- <a href="#" class="nav__link">
-                        <img src="assets/icons8-setting-24.png" name="" class="nav__icon"></img>
+                        <img src="../assets/icons8-setting-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Settings</span>
                     </a> -->
                 </div>
@@ -83,6 +71,7 @@ $user = new Database();
                 <img src="../assets/img/icons8-logout-24.png" name="" class="nav__icon"></img>
                 <span class="nav__name">Log Out</span>
             </a>
+        </nav>
         </nav>
     </div>
     <div class="container">

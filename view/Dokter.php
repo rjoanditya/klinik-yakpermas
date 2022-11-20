@@ -120,29 +120,29 @@
                         <th>Aksi</th>
                     </tr>
                     <tr>
-                        <td>Senin</td>
-                        <td>07.30 WIB - 12.00 WIB</td>
-                        <td>Dr. Jefri</td>
-                        <td>KIA</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                         <td>
-                          <a href="pemeriksaan.php" class="aksi-dokter aksi1">
+                          <a href="" class="aksi-dokter aksi1">
                           Edit
                           </a>
-                          <a href="pemeriksaan.php" class="aksi-dokter">
+                          <a href="" class="aksi-dokter">
                           Hapus
                           </a>
                       </td>
                     </tr>
                     <tr>
-                        <td>Selasa</td>
-                        <td>07.30 WIB - 12.00 WIB</td>
-                        <td>Dr. Iqbaal</td>
-                        <td>Umum</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                         <td>
-                          <a href="pemeriksaan.php" class="aksi-dokter aksi1">
+                          <a href="" class="aksi-dokter aksi1">
                             Edit
                             </a>
-                            <a href="pemeriksaan.php" class="aksi-dokter">
+                            <a href="" class="aksi-dokter">
                             Hapus
                             </a>
                       </td>
