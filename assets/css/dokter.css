@@ -329,7 +329,13 @@ table.tabel-dokter, table.tabel-dokter th, table.tabel-dokter td{
 .aksi1{
     margin-right: 5px;
 }
-
+.content1 .input-container form button .btn {
+    font-family: var(--body-font);
+    background-color: dodgerblue;
+    color: #fff;
+    padding: var(--main-padding);
+    border-radius: 4px;
+}
 /* ==== modal pop up ==== */
 .bg-modal{
     width: 100%;
