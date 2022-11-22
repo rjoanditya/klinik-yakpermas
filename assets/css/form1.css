@@ -447,6 +447,31 @@ select {
 .button .reset {
     margin-top: -100px;
 }
+
+
+.content1 table tr td a .aksi-dokter  {
+    font-family: var(--body-font);
+    background-color: dodgerblue;
+    color: #fff;
+    padding: var(--main-padding);
+    border-radius: 4px;
+}
+.content1 table .aksi-dokter:hover {
+    background-color: #d0011c;
+}
+
+.aksi1{
+    margin-right: 5px;
+}
+.content1 .input-container form button .btn {
+    font-family: var(--body-font);
+    background-color: dodgerblue;
+    color: #fff;
+    padding: var(--main-padding);
+    border-radius: 4px;
+}
+
+
 /* Footer */
 footer {
     text-align: center;

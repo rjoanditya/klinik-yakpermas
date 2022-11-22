@@ -205,74 +205,7 @@
                     </tr>
                 </table>
             </div>
-            <div class="content1">
-                <h2>Riwayat Pemeriksaan Pasien</h2>
-                <table>
-                    <tr>
-                        <th>Tanggal Pemeriksaan</th>
-                        <th>Subjective</th>
-                        <th>Objective</th>
-                        <th>Assesment</th>
-                        <th>Planning</th>
-                        <th>Petugas</th>
-                        <th>Aksi</th>
-                    </tr>
-                    <tr>
-                        <td>Jumat, 28 Oktober 2022 19:00</td>
-                        <td>
-                            <ul>
-                                <li>Anamnesis: Surat keterangan dokter</li>
-                                <li>Keluhan: Surat keterangan dokter</li>
-                                <li>Alergi Makanan: Tidak Ada</li>
-                                <li>Alergi Udara: Tidak Ada</li>
-                                <li>Alergi Obat: Tidak Ada</li>
-                                <li>Tinggi Badan: 160cm</li>
-                                <li>Berat Badan:48 kg</li>
-                                <li>Sistole:100 mmHg</li>
-                                <li>Diastole: 80 mmHg</li>
-                                <li>Lingkar Perut:-</li>
-                                <li>Suhu Tubuh:36 °C</li>
-                                <li>Respiratory rate: 20/menit</li>
-                                <li>Heart rate: 80 bpm</li>
-                                <li>Golongan Darah: O</li>
-                            </ul>
-                        </td>
-                        <td></td>
-                        <td>
-                            <ul>
-                                <li>Poli: UMUM</li>
-                                <li>Diagnosa Utama: -</li>
-                                <li>Diagnosa Sekunder: -</li>
-                            </ul>
-                        </td>
-                        <td>
-                            <ul>
-                                <li>Tindakan: -</li>
-                                <li>Obat: -</li>
-                            </ul>
-                        </td>
-                        <td>
-                            <ul>
-                                <li>Nama Perawat: Yi chang, S.Kep</li>
-                                <li>Nama Dokter:-</li>
-                            </ul>
-                        </td>
-                        <td>
-                        <a href="editPemeriksaa.php" class="aksi-dokter aksi1">
-                          Edit
-                          </a>
-                          <a href="" onclick="return confirm('Yakin dihapus ?');" class="aksi-dokter">
-                          Hapus
-                          </a>
-                        </td>
-                    </tr>
-                </table>
-                
-            </div>
-            <div class="content3">
-                
-            </div>
-
+            
         </div>
     </form>
 
