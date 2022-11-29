@@ -44,7 +44,6 @@ class Database
         }
         return $pasien;
     }
-
 }
 
 class Auth extends Database
@@ -86,17 +85,17 @@ class Auth extends Database
 
     public function storeKodifikasi($table_name)
     {
-            $id_kodifikasi = $_POST["id_kodifikasi"];
-            $id_pendaftaran = $_POST["id_pendaftaran"];
-            $id_diagnosis = $_POST["id_diagnosis"];
-            $icd10_utama = $_POST["icd10_utama"];
-            $icd10_sekunder = $_POST["icd10_sekunder"];
-            $icd9 = $_POST["icd9"];
+        $id_kodifikasi = $_POST["id_kodifikasi"];
+        $id_pendaftaran = $_POST["id_pendaftaran"];
+        $id_diagnosis = $_POST["id_diagnosis"];
+        $icd10_utama = $_POST["icd10_utama"];
+        $icd10_sekunder = $_POST["icd10_sekunder"];
+        $icd9 = $_POST["icd9"];
 
-            $query = "REPLACE INTO $table_name (id_kodifikasi, id_pendaftaran, id_diagnosis, icd10_utama, icd10_sekunder, icd9) VALUES ('$id_kodifikasi', '$id_pendaftaran','$id_diagnosis','$icd10_utama','$icd10_sekunder','$icd9')";
-    
-            mysqli_query($this->conn, "$query");
-            return header("Location:./kodifikasi.php");
+        $query = "REPLACE INTO $table_name (id_kodifikasi, id_pendaftaran, id_diagnosis, icd10_utama, icd10_sekunder, icd9) VALUES ('$id_kodifikasi', '$id_pendaftaran','$id_diagnosis','$icd10_utama','$icd10_sekunder','$icd9')";
+
+        mysqli_query($this->conn, "$query");
+        return header("Location:./kodifikasi.php");
     }
 
     public static function login()
@@ -110,10 +109,22 @@ class Auth extends Database
             'username' => $_POST['username'],
             'password' => md5($_POST['password']),
         ];
-        $query = "SELECT * FROM " . $table_name . " WHERE username =" . $data['username'] . "&& password=" . $data['password'];
-        if ($query) {
+
+        $query = 'SELECT * FROM ' . $table_name . ' WHERE username ="' . $data['username'] . '" AND password="' . $data['password'] . '"';
+        $result = $this->conn->query($query);
+        // var_dump($result->num_rows);
+        // die();
+        if ($result->num_rows == 1) {
+            session_start();
+            $_SESSION['login'] = true;
+            var_dump($_SESSION['login']);
+            die();
             header("Location:./dashboard.php");
+        } else {
+            header("Location:./login.php");
         }
+
+
         echo ('gagal');
         // return ('username tidak terdaftar');
 
