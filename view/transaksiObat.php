@@ -95,13 +95,13 @@ $user = new Database();
             <!-- main section -->
             <?php
             $id = $_GET["id"];
-            $allDosen = mysqli_query($user->conn, "SELECT pendaftaran_poli.id_pendaftaran, lib_pasien.nama_pasien, lib_obat.nama_obat, diagnosis.jumlah_obat, lib_obat.harga_satuan, lib_poli.nama_poli FROM diagnosis INNER JOIN pendaftaran_poli ON pendaftaran_poli.id_pendaftaran = diagnosis.id_pendaftaran INNER JOIN lib_pasien ON pendaftaran_poli.id_pasien = lib_pasien.id_pasien INNER JOIN lib_poli ON pendaftaran_poli.id_poli = lib_poli.id_poli INNER JOIN lib_obat ON diagnosis.id_obat = lib_obat.id_obat WHERE pendaftaran_poli.id_pendaftaran = $id");
-            $dosen = mysqli_fetch_assoc($allDosen);
+            $allPasien = mysqli_query($user->conn, "SELECT pendaftaran_poli.id_pendaftaran, lib_pasien.nama_pasien, lib_obat.nama_obat, diagnosis.jumlah_obat, lib_obat.harga_satuan, lib_poli.nama_poli FROM diagnosis INNER JOIN pendaftaran_poli ON pendaftaran_poli.id_pendaftaran = diagnosis.id_pendaftaran INNER JOIN lib_pasien ON pendaftaran_poli.id_pasien = lib_pasien.id_pasien INNER JOIN lib_poli ON pendaftaran_poli.id_poli = lib_poli.id_poli INNER JOIN lib_obat ON diagnosis.id_obat = lib_obat.id_obat WHERE pendaftaran_poli.id_pendaftaran = $id");
+            $Pasien = mysqli_fetch_assoc($allPasien);
             ?>
             
             <div class="main">
                 <h2>OBAT</h2>
-                <h3><?= $dosen['nama_pasien']; ?></h3>  
+                <h3><?= $Pasien['nama_pasien']; ?></h3>  
             </div>
             <div class="content1">
                 <table class="Obat">
@@ -114,10 +114,10 @@ $user = new Database();
                      </tr>
                      <tr>
                         <td>1</td>
-                        <td><?= $dosen['nama_obat']; ?></td>
-                        <td><?= $dosen['jumlah_obat']; ?></td>
-                        <td><?= $dosen['harga_satuan']; ?></td>
-                        <td><?= $dosen['jumlah_obat']*$dosen['harga_satuan']; ?></td>
+                        <td><?= $Pasien['nama_obat']; ?></td>
+                        <td><?= $Pasien['jumlah_obat']; ?></td>
+                        <td><?= $Pasien['harga_satuan']; ?></td>
+                        <td><?= $Pasien['jumlah_obat']*$Pasien['harga_satuan']; ?></td>
                     </tr>
                     <tr>
                         <td>2</td>
