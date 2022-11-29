@@ -100,14 +100,15 @@ $user = new Database();
                         <th>Poli</th>
                         <th>Aksi</th>
                     </tr>
-                    <?php foreach ($user->getAntrianKodifikasi() as $pasien) : ?>
+                    <?php $i = 1;
+                    foreach ($user->getAntrianKodifikasi() as $pasien) : ?>
                     <tr>
-                        <td>001</td>
-                        <td><?= $pasien['nama_pasien']; ?></td>
-                        <td><?= $pasien['nama_poli']; ?></td>
+                        <td><?= $i++ ?></td>
+                        <td><?= $pasien["nama_pasien"]; ?></td>
+                        <td><?= $pasien["nama_poli"]; ?></td>
                         <td>
                             <button class="aksi">
-                            <a href="editKodifikasi.php?id=<?=$pasien["id_pendaftaran"];?>" >pilih</a>
+                                <a href="editKodifikasi.php?id=<?= $pasien["id_pendaftaran"]; ?>">pilih</a>
                             </button>
                         </td>
                     </tr>

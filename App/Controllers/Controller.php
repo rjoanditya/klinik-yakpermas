@@ -38,6 +38,7 @@ class Database
 
     public function getAntrianKodifikasi()
     {
+        $pasien = [];
         $query = $this->conn->query("SELECT pendaftaran_poli.id_pendaftaran, lib_poli.nama_poli, lib_pasien.no_rm, lib_pasien.nik, lib_pasien.nama_pasien, lib_pasien.tgl_lahir, lib_pasien.alamat, lib_pasien.jenis_kelamin, diagnosis.diagnosis_utama, diagnosis.diagnosis_sekunder, diagnosis.tindakan FROM pendaftaran_poli INNER JOIN lib_pasien ON pendaftaran_poli.id_pasien = lib_pasien.id_pasien INNER JOIN diagnosis ON pendaftaran_poli.id_pendaftaran = diagnosis.id_pendaftaran INNER JOIN lib_poli ON pendaftaran_poli.id_poli = lib_poli.id_poli;");
         while ($data = mysqli_fetch_array($query)) {
             $pasien[] = $data;
@@ -117,8 +118,6 @@ class Auth extends Database
         if ($result->num_rows == 1) {
             session_start();
             $_SESSION['login'] = true;
-            var_dump($_SESSION['login']);
-            die();
             header("Location:./dashboard.php");
         } else {
             header("Location:./login.php");
