@@ -9,6 +9,7 @@ if (isset($_POST['submit'])) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,6 +18,7 @@ if (isset($_POST['submit'])) {
     <!-- link css -->
     <link rel="stylesheet" href="../assets/css/login.css">
 </head>
+
 <body>
     <div class="header">
         <div class="container">

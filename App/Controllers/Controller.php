@@ -142,8 +142,51 @@ class Controller extends Database
         }
         header("Location:./View/");
     }
-
-    public static function baru()
+    /**
+     * Function yang digunakan untuk menyimpan pendaftaran pasien
+     */
+    public function storePasien()
     {
+
+        $dataPasien = [
+            'nama_pasien'       => $_POST['nama_pasien'],
+            'nik'               => $_POST['nik'],
+            'tempat_lahir'      => $_POST['tempat_lahir'],
+            'tgl_lahir'         => $_POST['tgl_lahir'],
+            'umur'              => $_POST['umur'],
+            'jenis_kelamin'     => $_POST['jenis_kelamin'],
+            'gol_darah'         => $_POST['gol_darah'],
+            'agama'             => $_POST['agama'],
+            'pendidikan'        => $_POST['pendidikan'],
+            'status_pernikahan' => $_POST['status_pernikahan'],
+            'alamat'            => $_POST['alamat'],
+            'ibu_kandung'       => $_POST['ibu_kandung'],
+        ];
+
+        $query = "INSERT INTO lib_pasien (";
+        $query .= implode(",", array_keys($dataPasien)) . ') VALUES (';
+        $query .= "'" . implode("','", array_values($dataPasien)) . "')";
+        if (mysqli_query($this->conn, $query)) {
+            // mendapatkan id pasien terbaru setelah input pasien
+            $queries = "SELECT * FROM lib_pasien ORDER BY id_pasien DESC LIMIT 1 ";
+            $id_pasien = mysqli_fetch_array($this->conn->query($queries));
+            // var_dump($id_pasien['id_pasien']);
+            // die();
+            $datapoli = [
+                'debitur'           => $_POST['debitur'],
+                'jenis_perawatan'   => $_POST['jenis_perawatan'],
+                'jenis_kunjungan'   => $_POST['jenis_kunjungan'],
+                'id_poli'           => $_POST['poli'],
+                'id_pasien'        => $id_pasien['id_pasien'],
+            ];
+
+            $string = "INSERT INTO pendaftaran_poli (";
+            $string .= implode(",", array_keys($datapoli)) . ') VALUES (';
+            $string .= "'" . implode("','", array_values($datapoli)) . "')";
+
+            if (mysqli_query($this->conn, $string)) {
+                return header("Location:./pendaftaran.php");
+            }
+        }
     }
 }

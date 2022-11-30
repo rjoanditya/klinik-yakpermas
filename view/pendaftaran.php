@@ -14,8 +14,8 @@ $user = new Database();
 </head>
 
 <body id="body-pd">
-<div class="l-navbar" id="navbar">
-<nav class="nav">
+    <div class="l-navbar" id="navbar">
+        <nav class="nav">
             <div>
                 <div class="nav__brand">
                     <img src="../assets/img/icons8-menu-24.png" name="" class="nav__toggle" id="nav-toggle"></img>
@@ -44,23 +44,23 @@ $user = new Database();
                         </ul>
                     </div>
                     <div class="collapse">
-                    <a href="dokter.php" class="nav__link ">
-                        <img src="../assets/img/icons8-health-book-24.png" name="" class="nav__icon"></img>
-                        <span class="nav__name">Dokter</span>
-                    </a>
+                        <a href="dokter.php" class="nav__link ">
+                            <img src="../assets/img/icons8-health-book-24.png" name="" class="nav__icon"></img>
+                            <span class="nav__name">Dokter</span>
+                        </a>
                     </div>
                     <a href="pemeriksaan.php" class="nav__link ">
                         <img src="../assets/img/icons8-treatment-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Pemeriksaan</span>
-                    <a href="kodifikasi.php" class="nav__link collapse">
-                        <img src="../assets/img/icons8-file-24 (1).png" name="" class="nav__icon"></img>
-                        <span class="nav__name">Kodifikasi</span>
-                    </a>
-                    <a href="pelaporan.php" class="nav__link collapse">
-                        <img src="../assets/img/icons8-folder-24 (1).png" name="" class="nav__icon"></img>
-                        <span class="nav__name">Pelaporan</span>
-                    </a>
-                    <!-- <a href="#" class="nav__link">
+                        <a href="kodifikasi.php" class="nav__link collapse">
+                            <img src="../assets/img/icons8-file-24 (1).png" name="" class="nav__icon"></img>
+                            <span class="nav__name">Kodifikasi</span>
+                        </a>
+                        <a href="pelaporan.php" class="nav__link collapse">
+                            <img src="../assets/img/icons8-folder-24 (1).png" name="" class="nav__icon"></img>
+                            <span class="nav__name">Pelaporan</span>
+                        </a>
+                        <!-- <a href="#" class="nav__link">
                         <img src="../assets/icons8-setting-24.png" name="" class="nav__icon"></img>
                         <span class="nav__name">Settings</span>
                     </a> -->
@@ -119,7 +119,6 @@ $user = new Database();
                     <tr>
                         <th>No</th>
                         <th>Aksi</th>
-                        <th>No RM</th>
                         <th>NIK</th>
                         <th class="nama">Nama</th>
                         <th>Jenis Kelamin</th>
@@ -128,9 +127,7 @@ $user = new Database();
                     <tr>
                         <td></td>
                         <td></td>
-                        <td>
-                            <input type="text" name="" placeholder="Cari No RM">
-                        </td>
+
                         <td>
                             <input type="text" name="" placeholder="Cari NIK">
                         </td>
@@ -151,9 +148,6 @@ $user = new Database();
                             <button class="aksi">
                                 <a href="#bg-modal" id="button">Daftar</a>
                             </button>
-                        </td>
-                        <td>
-                            <?= $pasien['no_rm']; ?>
                         </td>
                         <td><?= $pasien['nik']; ?></td>
                         <td>
