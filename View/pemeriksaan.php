@@ -10,64 +10,7 @@
 </head>
 
 <body id="body-pd">
-<div class="l-navbar" id="navbar">
-<nav class="nav">
-            <div>
-                <div class="nav__brand">
-                    <img src="../assets/img/icons8-menu-24.png" name="" class="nav__toggle" id="nav-toggle"></img>
-                    <a href="#" class="nav__logo"></a>
-                </div>
-
-                <div class="nav__list">
-                    <div class="nav__link collapse user">
-                        <img src="../assets/img/icons8-user-24.png" name="" class="nav__icon"></img>
-                        <span class="nav__name">Nama</span>
-                    </div>
-                    <a href="dashboard.php" class="nav__link ">
-                        <img src="../assets/img/icons8-home-page-24 (1).png" name="" class="nav__icon"></img>
-                        <span class="nav__name">Dashboard</span>
-                    </a>
-                    <div class="nav__link collapse">
-                        <img src="../assets/img/icons8-id-card-24.png" name="" class="nav__icon"></img>
-                        <span class="nav__name">Pendaftaran</span>
-                        <img src="../assets/img/icons8-expand-arrow-24 (1).png" name="" class="collapse__link"></img>
-
-                        <ul class="collapse__menu">
-                            <span><a href="dashboard.php" class="collapse__sublink">Dashboard</a></span><br>
-                            <a href="antrian1.php" class="collapse__sublink">Antrian</a>
-                            <a href="pendaftaran.php" class="collapse__sublink">Pendaftaran</a>
-                            <!-- <a href="#" class="collapse__sublink">Members</a> -->
-                        </ul>
-                    </div>
-                    <div class="collapse">
-                    <a href="dokter.php" class="nav__link ">
-                        <img src="../assets/img/icons8-health-book-24.png" name="" class="nav__icon"></img>
-                        <span class="nav__name">Dokter</span>
-                    </a>
-                    </div>
-                    <a href="pemeriksaan.php" class="nav__link ">
-                        <img src="../assets/img/icons8-treatment-24.png" name="" class="nav__icon"></img>
-                        <span class="nav__name">Pemeriksaan</span>
-                    <a href="kodifikasi.php" class="nav__link collapse">
-                        <img src="../assets/img/icons8-file-24 (1).png" name="" class="nav__icon"></img>
-                        <span class="nav__name">Kodifikasi</span>
-                    </a>
-                    <a href="pelaporan.php" class="nav__link collapse">
-                        <img src="../assets/img/icons8-folder-24 (1).png" name="" class="nav__icon"></img>
-                        <span class="nav__name">Pelaporan</span>
-                    </a>
-                    <!-- <a href="#" class="nav__link">
-                        <img src="../assets/icons8-setting-24.png" name="" class="nav__icon"></img>
-                        <span class="nav__name">Settings</span>
-                    </a> -->
-                </div>
-            </div>
-            <a href="login.php" class="nav__link">
-                <img src="../assets/img/icons8-logout-24.png" name="" class="nav__icon"></img>
-                <span class="nav__name">Log Out</span>
-            </a>
-        </nav>
-    </div>
+<?php include 'sidebar.php'; ?>
     <form action="" method="post" class="form">
         <div class="container">
             <!-- ============ HEADER START================= -->
@@ -258,7 +201,7 @@
                             </ul>
                         </td>
                         <td>
-                        <a href="editPemeriksaa.php" class="aksi-dokter aksi1">
+                        <a href="editPemeriksaan.php" class="aksi-dokter aksi1">
                           Edit
                           </a>
                           <a href="" onclick="return confirm('Yakin dihapus ?');" class="aksi-dokter">
